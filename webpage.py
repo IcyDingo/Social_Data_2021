@@ -494,7 +494,7 @@ def app1():
     st.title("Social Data Analysis and Vizualization - New York Collisions Analysis")
     st.write("Welcome :) This dashboard was created in the framework of Social Data Analysis and Vizualization course for the Technical University of Denmark."+
             " In this dashboard, we are presenting trafic collisions that have happened in New York city. On the left side of the page, there is a navigation pane that can be used to go through each section of the dashboard.")
-    
+    st.write("**Desclaimer** It is recommended to use white theme while you go through the dashboard. You can always adjust your theme on the top right area of the page using settings.")
     
     col1,col2 = st.beta_columns([1.12,1])
     col1.image('https://images.squarespace-cdn.com/content/v1/564be6bde4b0884e9478a03f/1578496563576-9NEBMM8OGF1M36U8KU6L/ke17ZwdGBToddI8pDm48kNvT88LknE-K9M4pGNO0Iqd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UU_i9-ln4sAC0TGEmkfMFKJn5Kcyb6Y0O9dBHu3N61jtpC969RuPXvt2ZwyzUXQf7Q/NY-Night-Cinemagraph.gif?format=2500w', width=933)
