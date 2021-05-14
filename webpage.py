@@ -19,7 +19,7 @@ warnings.filterwarnings('ignore')
 st.set_page_config(layout='wide')
 
 
-#sdda
+
 ############################################## DATASET DEFINITION ###############################################################################################################
 @st.cache(allow_output_mutation=True, suppress_st_warning=True)
 def load_data():
@@ -679,6 +679,23 @@ The higher the precipitation levels the higher weight.   """)
     
 def app6():
     st.title("Conclusions")
+    st.markdown("""The main takeaways from this project are:
+* Collisions follow a highly predictable trend with high seasonality as shown from the graphs above
+* There is a very small precentage of people that are killed in an accident in NYC
+* The hotspot area of the city is Midtown Manhattan 
+* Most collisions happen during mid-day hours but the most fatal ones happened during the night, probably due to alchool consumption
+* During the week the activity is more or less the same, peaking in Fridays. In the weekends the activity drops about 25%
+* Fatal accident include mostly pedestrians and not motorists
+* 1 in 5 accidents include an injury 
+* Collision prediction can be used in aidding emergency services proactiveness
+* Normalizing the collision according to population of the neighborhood reveals a clearer view of the situation since it's an aples to aples comparison. 
+
+Predicting collision on the exact location is a difficult task but it can be made easier by making a prediction for each neighborhod. The model that was used has an r-square of 0.95
+ which a very good performance. This is possible due the exploitation of seasonality in the dataset and the use of FB Propher which works best when there is strong 
+ seasonality patterns. Since it's a time-series problem extra fetures like weather and vehicle type can not be included in this model. Another model that takes this features 
+ into consideration could have been a choice but because of the seasonality factor FB Prophet was chosen. The way that the weather data was treated on this analysis comes with 
+ the assumption when it's rain the probability of a collision increases which might not be the case in the real world or might have a smaller correlation. Further analysis on the 
+ weather conection to collisions can be made in a future project.""")
     st.header("And let us not forget about these type of collisions...")
     st.image("https://i.pinimg.com/originals/81/da/f3/81daf3b1d9621a05b1910d6083d1f630.gif", width=933)
 
