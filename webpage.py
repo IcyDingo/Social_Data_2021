@@ -611,11 +611,12 @@ afternoons and the the week days. This can be explained because on week days mos
 
 def app4():
     st.title('Neighborhood Analysis')
-    st.markdown("""In this section 193 neighboorhoods of New York were analyzed. From the Borough Analysis, it was pointed out that Manhattan is the most crusial borough. However, the Boroughs cover a huge amount of area and thus, it was decided to go one step ahead and analyze the neighborhoods individually. 
+    st.markdown("""In this section, 193 neighboorhoods of New York city were analyzed. From the Borough Analysis, it was pointed out that Manhattan is the most crusial borough. However, 
+    the Boroughs cover a huge amount of area and thus, it was decided to go one level down and analyze the neighborhoods individually. 
 
-All the neighborhoods are displayed in the map above and has been categorized according to the number of collisisons per neighborhood population. This way provides a better way of 
-identifying the important areas. The color scale correspond the KPI factor, the higher the factor the greater the collisions per population. The ones with the most collisions per 
-population are the yellow areas which are: 
+All neighborhoods, that are displayed in the map below, have been colored scaled and normallized according to the number of collisisons per population. The color scale corresponds to 
+the KPI factor, the higher the factor the greater the collisions per population. The most important ones are the yellow areas which are: 
+
 - Midtown-Midtown South
 - Springfield Gardens South-Brookville
 - Hudson Yards-Chelsea-Flatiron-Union Square
@@ -627,22 +628,22 @@ population are the yellow areas which are:
 - East Williamsburg
 - Rosedale
 
-These areas correspond to high number of collisions with low population and the most crucial among them during 2014-2020 is the Midtown with a total of 332,290 collisions, 
-11 people died and almost 181 were injured.""")
+These areas are the most crucial and among them during 2014-2020 is the Midtown Manhattan with a total of 332,290 collisions, 11 people died, and 181 were injured.""")
     st.plotly_chart(fig11)
-    st.write("From the heatmap below, displays the the 24-hour cycle. It can be seen, that the downtown is area of interest and it peaks during the afternoon, mostly because the New yorker's return home from their homes.")
+    st.write("The heatmap below, displays the the 24-hour cycle. It can be seen, that the downtown is area of interest and it peaks during the afternoon, mostly because people are returning home from their workplace.")
     folium_static(min, width=1700, height=700)
     st.markdown("""For the Seasonality Analysis,the collisions has been normalized with the same procedure as the Borough Analysis and only the nomralized results are displayed. 
-    For more information how the normalization is achieved and the non-normalized results check notebook. To avoid any incovinience, only the 10 top neighborhoods according to the 
-    KPI factors are included in the seasonality analysis
+    For more information on how the normalization is achieved and on how the non-normalized results were generated, check the notebook. To avoid clutter, 
+    only the 10 top neighborhoods according to the 
+    KPI factors are visualized in the seasonality analysis
 
 
 **Highlighted Results:**
 
-- **Midtown** is significantly separated from the rest neighborhoods. This can be explained, because of the low density population and the high number of companies offices. 
-- Between 2014 and 2018, a slight increase of the total collisions per neighboorhood can be observed. However, a downward trend can be abserved after 2019, which can be explained from the COVID-19 pandemic outbursting. 
-- According to 24-7 cycle and the 24-hours cycle, the collisions drop over weekends and during the night. In contrast, an upward tendecy can be observed during the afternoons and the the week days. This can be explained because, on the week days most of citizens are going to their works and  during the afternoon they return from their works. 
-- According to the monthly seasonality, it can be seen that during  spring there is a sligh decrease on the collisions compared to the winter season. April and February are the months with the least amount of collisions on each neighborhood, respectively. """)
+- **Midtown** stands out from the other neighborhoods. This can be explained, because of the low number of residents and high number of offices. 
+- Between 2014 and 2018, a slight increase of the total collisions per neighboorhood can be observed. However, a downward trend can be seen after 2019, which can be explained from the COVID-19 pandemic. 
+- According to 24-7 cycle and the 24-hours cycle, the collisions drop over weekends and during the night. In contrast, an upward tendecy can be observed during the afternoons and the the week days. This can be explained because, on the week days most of citizens are going to their worklplace and  during the afternoon they return from there. 
+- According to the monthly seasonality, it can be seen that during  spring there is a slight decrease on the collisions compared to the winter season. April and February are the months with the least amount of collisions on each neighborhood, respectively. """)
 
     col1,col2 = st.beta_columns([1,1])
 
