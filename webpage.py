@@ -509,15 +509,17 @@ The datasets that were used are:
 * [New York Population per Neighborhood](https://dev.socrata.com/foundry/data.cityofnewyork.us/swpk-hqdp)
 * [Weather Data](https://www.noaa.gov/)
 
-The design behind the UI presented in the webpage is based upon a multi-page comic book genre style. Each page is devided into the respective pahses of the analysis which are:
+The design behind the UI presented in the webpage is based upon a multi-page comic book genre style. Each page is devided into the respective sections of the analysis which are:
 
 * Welcome Page 
 * Collision Analysis 
 * Borough Analysis
 * Neighborhood Analysis
 * Collision Forecasting
+* Conclusions and Discussions
 
-The motivation behind the project is to understand the seasonality of the collision that are happening and see if there are any neighborhoods that are forecasted to have an increase in the number of collisions. Afterwards, if such neighborhoods are indetified we can plan for a more proactive way of placing the emergeniy services around the city.
+The motivation behind the project is to understand the seasonality of the collisions that are happening in NYC and investigate if there are any neighborhoods with a high number of collisions relatively to their population.
+ Afterwards, if such neighborhoods are indetified,  a more proactive plan of placing the emergency services around the city can be made.
 
 GitHub [link](https://github.com/IcyDingo/Social_Data_2021?fbclid=IwAR2Z1CPXIY-el7RIKhyz99HhcrmpFURWT8ejiT57u20bMZObIupBuC363q0) with the final datasets and supproting Python Files.
 
@@ -529,25 +531,28 @@ Google Drive [link](https://drive.google.com/file/d/1dIj6iRJ_zx4BPfL86HrP4v3Bd9p
 def app2():
     
     st.title("Collision Analysis")
-    st.write("In this part of the dashboard, we are doing a high level analysis on the accidents that have happened in New York city for the period of 2014 until 2020."
-            +" The first piechart shows how many accidents had injuries and deaths and also how many of those collisions were without an injury."
-            +" Given the fact that New York is one of the biggest cities in the world, having injuries in 20% of the accidents means that this is a serious problem for New York city."
-            +" In this project, we want to raise awairness for this issue and find ways to reduce both the percentage of injuries in accidents and also the total number of accidents.")
+    st.write("In this part of the dashboard, a high level analysis is executed on the accidents that have happened in New York city for the period of 2014 until 2020."
+            +" The first graph shows how many accidents had injuries, deaths and also how many of those collisions were without an injury."
+            +" Given the fact that New York is one of the biggest cities in the world, having injuries in 20% of the accidents means that this is a serious problem for NYC."
+            +" In this project, we want to raise awairness for this issue and find ways to reduce both percentage of injuries in accidents and total number of accidents.")
 
     st.plotly_chart(fig1)
     st.write("To begin with, the following 6 graphs describe the accidents that had injuries or deaths for the studied period. ")
-    st.markdown("""Highlited Resuls:
+    st.markdown("""Highlighted Resuls:
 
-- According to the first two digrams, the most injured ones are the motorists, which make sense, because most of the times there are ones involved on the creation of collision. However, the most killed ones are the pedestrian. This can be explained, because the vehicle possess safety equipment assisting on minimizing the motorists injures and enen more the possibility of a motorist to be killed by collision. In contrast, the pedestrian are not protected by anything and when they are involved in a collision the possiobility of death is much higher compared to the morists and the cyclists.  
-- According to yearly pattern, it can be seen that the number of injuries has been increased between 2016 and 2019 compared to the previous years. However, between 2013 and 2018 an upward trend can be seen for the number of persons who has been killed except of the year 2017. In 2017, a terrorist attack happended in NYC resulting in 18 deaths. [Source](https://www.vox.com/2017/10/31/16587120/new-york-city-terror-attack-what-we-know) 
+- According to the first two digrams, the most injuries happen to motorists, meaning people that have a motorvehicle, which makes sense, because, most of the times, they are the ones
+ involved in a collision. However, the most deaths occur to pedestrian. This might be the case because 
+motorists, being inside the car, are more protected compared to pedestrians and cyclists that are way more exposed than the former.
+- According to yearly pattern, it can be seen that the number of injuries increased between 2016 and 2019 compared to previous years. However, between 2014 and 2018 an 
+downward trend can be seen for the number of persons who died except of the year 2017. In 2017, a terrorist attack happended in NYC resulting in 18 deaths. [Source](https://www.vox.com/2017/10/31/16587120/new-york-city-terror-attack-what-we-know) 
 - The number of deaths is increasing over the weekend and over the nights, which can be explained of the alcohol consumption during night-life. 
-- In 2020, an overall declined can be observed, due to the COVID-19 pandemic and the regularations related to
-- According to the monthly patter, the first 3 months of the year (January-March) have the least number both of injuries and deaths.
+- In 2020, an overall decline can be observed, due to the COVID-19 pandemic.
+- According to the monthly patterns, the first 3 months of the year (January-March) have the least number for both injuries and deaths.
 
 Finally, the last two graphs describe the cars that are involved in **all** traffic collisions and the contributing factors respectively:
 
-- The most common vehicles involved in collisions are the Sedan and the passenger's vehicle. 
-- The most contributing factors are not specified, although for the specified factors the most common are the distraction, driving too close and failing the to yield right-of-the-way.""",unsafe_allow_html=True)
+- The most common vehicles involved in collisions are Sedans and passenger vehicles. 
+- The most common contributing factors are the distraction/inattention of the driver, driving too close, and failure to yield right-of-the-way.""",unsafe_allow_html=True)
     col1,col2 = st.beta_columns([1,1])
     #with col1:
     #col1.header("**Hey1**")S
@@ -678,7 +683,7 @@ The higher the precipitation levels the higher weight.   """)
     st.plotly_chart(fig22)
     
 def app6():
-    st.title("Conclusions")
+    st.title("Conclusions and Discussions")
     st.markdown("""The main takeaways from this project are:
 * Collisions follow a highly predictable trend with high seasonality as shown from the analysis.
 * There is a very small precentage of people that are killed in an accident in NYC (less that 0.1%).
@@ -706,6 +711,6 @@ app.add_app("Collision Analysis",app2)
 app.add_app("Borough Analysis",app3)
 app.add_app("Neighborhood Analysis", app4)
 app.add_app("Collision Forecasting", app5)
-app.add_app("Conclusions", app6)
+app.add_app("Conclusions and Discussions", app6)
 
 app.run()
