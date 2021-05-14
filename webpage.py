@@ -634,9 +634,7 @@ These areas are the most crucial and among them during 2014-2020 is the Midtown 
     folium_static(min, width=1700, height=700)
     st.markdown("""For the Seasonality Analysis,the collisions has been normalized with the same procedure as the Borough Analysis and only the nomralized results are displayed. 
     For more information on how the normalization is achieved and on how the non-normalized results were generated, check the notebook. To avoid clutter, 
-    only the 10 top neighborhoods according to the 
-    KPI factors are visualized in the seasonality analysis
-
+    only the 10 top neighborhoods according to the KPI factors are visualized in the seasonality analysis.
 
 **Highlighted Results:**
 
