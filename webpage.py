@@ -632,16 +632,6 @@ These areas are the most crucial and among them during 2014-2020 is the Midtown 
     st.plotly_chart(fig11)
     st.write("The heatmap below, displays the the 24-hour cycle. It can be seen, that the downtown is area of interest and it peaks during the afternoon, mostly because people are returning home from their workplace.")
     folium_static(min, width=1700, height=700)
-    st.markdown("""For the Seasonality Analysis,the collisions has been normalized with the same procedure as the Borough Analysis and only the nomralized results are displayed. 
-    For more information on how the normalization is achieved and on how the non-normalized results were generated, check the notebook. To avoid clutter, 
-    only the 10 top neighborhoods according to the KPI factors are visualized in the seasonality analysis.
-
-**Highlighted Results:**
-
-- **Midtown** stands out from the other neighborhoods. This can be explained, because of the low number of residents and high number of offices. 
-- Between 2014 and 2018, a slight increase of the total collisions per neighboorhood can be observed. However, a downward trend can be seen after 2019, which can be explained from the COVID-19 pandemic. 
-- According to 24-7 cycle and the 24-hours cycle, the collisions drop over weekends and during the night. In contrast, an upward tendecy can be observed during the afternoons and the the week days. This can be explained because, on the week days most of citizens are going to their worklplace and  during the afternoon they return from there. 
-- According to the monthly seasonality, it can be seen that during  spring there is a slight decrease on the collisions compared to the winter season. April and February are the months with the least amount of collisions on each neighborhood, respectively. """)
 
     col1,col2 = st.beta_columns([1,1])
 
