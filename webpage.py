@@ -494,7 +494,7 @@ def app1():
     st.title("Social Data Analysis and Vizualization - New York Collisions Analysis")
     st.write("Welcome :) This dashboard was created in the framework of Social Data Analysis and Vizualization course for the Technical University of Denmark."+
             " In this dashboard, we are presenting trafic collisions that have happened in New York city. On the left side of the page, there is a navigation pane that can be used to go through each section of the dashboard.")
-    st.write("**Desclaimer** It is recommended to use white theme while you go through the dashboard. You can always adjust your theme on the top right area of the page using settings.")
+    st.write("**DISCLAIMER** It is recommended to use white theme while you go through the dashboard. You can always adjust your theme on the top right area of the page using settings.")
     
     col1,col2 = st.beta_columns([1.12,1])
     col1.image('https://images.squarespace-cdn.com/content/v1/564be6bde4b0884e9478a03f/1578496563576-9NEBMM8OGF1M36U8KU6L/ke17ZwdGBToddI8pDm48kNvT88LknE-K9M4pGNO0Iqd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UU_i9-ln4sAC0TGEmkfMFKJn5Kcyb6Y0O9dBHu3N61jtpC969RuPXvt2ZwyzUXQf7Q/NY-Night-Cinemagraph.gif?format=2500w', width=933)
@@ -680,21 +680,21 @@ The higher the precipitation levels the higher weight.   """)
 def app6():
     st.title("Conclusions")
     st.markdown("""The main takeaways from this project are:
-* Collisions follow a highly predictable trend with high seasonality as shown from the graphs above
-* There is a very small precentage of people that are killed in an accident in NYC
-* The hotspot area of the city is Midtown Manhattan 
-* Most collisions happen during mid-day hours but the most fatal ones happened during the night, probably due to alchool consumption
-* During the week the activity is more or less the same, peaking in Fridays. In the weekends the activity drops about 25%
-* Fatal accident include mostly pedestrians and not motorists
-* 1 in 5 accidents include an injury 
-* Collision prediction can be used in aidding emergency services proactiveness
-* Normalizing the collision according to population of the neighborhood reveals a clearer view of the situation since it's an aples to aples comparison. 
+* Collisions follow a highly predictable trend with high seasonality as shown from the analysis.
+* There is a very small precentage of people that are killed in an accident in NYC (less that 0.1%).
+* The hotspot collision area of the city is Midtown Manhattan. 
+* Most collisions happen during mid-day hours but the most fatal ones happened at night, probably due to alchool consumption.
+* During the week the activity is more or less the same, peaking in Fridays. In the weekends the activity drops about 25% but fatal accidents increase by 20%.
+* Fatal accident include mostly pedestrians and not motorists.
+* 1 out of 5 accidents include an injury.
+* Collision prediction can be used in aidding emergency services proactiveness.
+* Normalizing the collision according to population of the neighborhood reveals a clearer view of the situation since it's an apples to apples comparison ;). 
 
 Predicting collision on the exact location is a difficult task but it can be made easier by making a prediction for each neighborhod. The model that was used has an r-square of 0.95
- which a very good performance. This is possible due the exploitation of seasonality in the dataset and the use of FB Propher which works best when there is strong 
+ which a very good performance. This is possible due the exploitation of seasonality in the dataset and the use of FB Prophet, which is working better when there are strong 
  seasonality patterns. Since it's a time-series problem extra fetures like weather and vehicle type can not be included in this model. Another model that takes this features 
- into consideration could have been a choice but because of the seasonality factor FB Prophet was chosen. The way that the weather data was treated on this analysis comes with 
- the assumption when it's rain the probability of a collision increases which might not be the case in the real world or might have a smaller correlation. Further analysis on the 
+ into consideration could have been a choice, but, because of the seasonality factor, FB Prophet was chosen. The way that the weather data was treated on this analysis comes with 
+ the assumption that, when it's raining the probability of a collision increases, which might not be the case or might have a smaller correlation. Further, a more thorough analysis on the 
  weather conection to collisions can be made in a future project.""")
     st.header("And let us not forget about these type of collisions...")
     st.image("https://i.pinimg.com/originals/81/da/f3/81daf3b1d9621a05b1910d6083d1f630.gif", width=933)
