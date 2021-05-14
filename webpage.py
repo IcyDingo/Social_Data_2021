@@ -543,8 +543,8 @@ def app2():
 - According to the first two digrams, the most injuries happen to motorists, meaning people that have a motorvehicle, which makes sense, because, most of the times, they are the ones
  involved in a collision. However, the most deaths occur to pedestrian. This might be the case because 
 motorists, being inside the car, are more protected compared to pedestrians and cyclists that are way more exposed than the former.
-- According to yearly pattern, it can be seen that the number of injuries increased between 2016 and 2019 compared to previous years. However, between 2014 and 2018 an 
-downward trend can be seen for the number of persons who died except of the year 2017. In 2017, a terrorist attack happended in NYC resulting in 18 deaths. [Source](https://www.vox.com/2017/10/31/16587120/new-york-city-terror-attack-what-we-know) 
+- According to yearly pattern, it can be seen that the number of injuries increased between 2016 and 2019 compared to previous years. 
+- Between 2014 and 2018 an downward trend can be seen for the number of persons who died except of the year 2017. In 2017, a terrorist attack happended in NYC resulting in 18 deaths. [Source](https://www.vox.com/2017/10/31/16587120/new-york-city-terror-attack-what-we-know) 
 - The number of deaths is increasing over the weekend and over the nights, which can be explained of the alcohol consumption during night-life. 
 - In 2020, an overall decline can be observed, due to the COVID-19 pandemic.
 - According to the monthly patterns, the first 3 months of the year (January-March) have the least number for both injuries and deaths.
@@ -574,17 +574,22 @@ Finally, the last two graphs describe the cars that are involved in **all** traf
 #@st.cache(allow_output_mutation=True)
 def app3():
     st.title('Borough Analysis')
-    st.markdown("""In this part of the dashboard the 5 main boroughs of New York (Manhattan, Broklyn, Bronx, Staten Islandm, Quenns) are analyzed. The purpose of this page is to identify the most crusial borough of new york according to the seasonality analysis 
-In the maps below, it can be observed that the borough with the most collisions during 2014-2020 is the _Brooklyn_ with a total of almost 430,000 collision, 520 people dead and almost 130,000 people were injured. For the Seasonality Analysis, it is important the number of collisions per neighborhood to be normalized according to the borough's population. Normalization plays an important role, because the distributions change significantly among the boroughs. However, only the normalized results are displayed here. For more information go to the notebook.""")
+    st.markdown("""In this part of the dashboard the 5 main boroughs of New York (Manhattan, Broklyn, Bronx, Staten Islandm, Quenns) are analyzed. The purpose of this page is to 
+    identify the most crusial borough of New York according to the seasonality analysis. 
+In the maps below, it can be observed that the borough with the most collisions during 2014-2020 is the _Brooklyn_ with a total of almost 430,000 collision, 520 people dead and 
+about 130,000 people were injured. For the Seasonality Analysis, it is important to normalize the number of collisions per borough relatively to their population.
+ Normalization plays an important role, because the distributions change significantly among the boroughs. However, only the normalized results are displayed here. 
+ For more information visit the notebook.""")
     st.plotly_chart(fig6)
     st.write("")
-    st.write("The map below diplays the heatmap of the collisions in the whole New York on a monthly basis. It can be observed that Manhattan and broklyn has the higest density fo collisions, wheareas, Staten Island has the least density.")
+    st.write("The map below diplays the heatmap of the collisions in the whole New York city on a monthly basis throughout the years 2014-2020. It can be observed that Manhattan and Brooklyn has the highest density of collisions, wheareas, Staten Island has the smallest density.")
     folium_static(period,width=1700, height=600)
     st.markdown("""Highlighted results:
-- **Manhattan** is the borough with the most collision  per population and **Broklyn** is the borough with the most collisions in total.
+- **Manhattan** is the borough with the most collisions  per population and **Brooklyn** is the borough with the most collisions in total.
 - Over the years, on each there is a slight increase of the  total collisions. However, a downward trend can be abserved after 2019, which can be explained from the COVID-19 pandemic outbursting. 
-- According to 24-7 cycle and the 24-hours cycle, the number of collisions drop over the weekend and during the night. In contrast, an upward tendecy can be observed during the afternoons and the the week days. This can be explained because, on the week days most of citizens are going to their works and  during the afternoon they return from their works. 
-- According to the monthly seasonality, it can be seen that during the spring there is a sligh decrease on the collisions compared to the winter season. April and February are the months with the least amount of collisions on each Borough respectively. """)
+- According to 24-7 cycle and the 24-hours cycle, the number of collisions drop over the weekend and during the night. In contrast, an upward tendecy can be observed during the 
+afternoons and the the week days. This can be explained because on week days most of citizens are going to their jobs and during the afternoon they return from there. 
+- According to the monthly seasonality, it can be seen that during the spring there is a slight decrease on the collisions compared to the winter season. April and February are the months with the least amount of collisions on each Borough respectively. """)
     col1,col2 = st.beta_columns([1,1])
     with col1:
         #col1.header("**Hey1**")
